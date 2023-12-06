@@ -30,6 +30,6 @@ export const WS_CHECKER_RECONNECT_EVENT = 'vite-plugin-checker:reconnect'
 
 export const runtimeSourceFilePath = import.meta.url.endsWith('.ts')
   ? // for development only, maybe should use NODE_ENV to distinguish
-    _require.resolve('../@runtime/main.js')
-  : _require.resolve('../../@runtime/main.js')
+    _require.resolve('../main.js')
+  : _require.resolve('../main.js')
 export const runtimeCode = `${fs.readFileSync(runtimeSourceFilePath, 'utf-8')};`
